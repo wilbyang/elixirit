@@ -18,6 +18,7 @@ defmodule Demo3Web.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/pow", PowController, :solve
     live "/users", UserLive.Index, :index
     live "/users/new", UserLive.Index, :new
     live "/users/:id/edit", UserLive.Index, :edit

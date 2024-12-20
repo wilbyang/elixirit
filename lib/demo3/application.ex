@@ -17,6 +17,7 @@ defmodule Demo3.Application do
       # Start a worker by calling: Demo3.Worker.start_link(arg)
       # {Demo3.Worker, arg},
       # Start to serve requests, typically the last entry
+      {Demo3.PoWServer, 4},
       Demo3Web.Endpoint
     ]
 
