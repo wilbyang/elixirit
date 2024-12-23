@@ -11,7 +11,24 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 ## Demo3.PoWServer
 
-The `Demo3.PoWServer` module in the `poc.ex` file is responsible for handling Proof of Work (PoW) computations. It provides functionality to perform and verify PoW tasks, which are essential for ensuring the integrity and security of the system.
+The `Demo3.PoWServer` module in the `poc.ex` file is responsible for handling Proof of Work (PoW) computations. 
+requesting `http://localhost:4000/pow?input=example2` will return the result of the PoW computation.
+
+## Demo3.TcpServer
+
+The `Demo3.TcpServer` module in the `tcp.ex` file is responsible for handling TCP connections and decode data in pb.
+```syntax = "proto3";
+package search;
+option go_package = "./search";
+message SearchRequest {
+  string query = 1;
+  int32 page_number = 2;
+  int32 results_per_page = 3;
+}
+```
+run `mix protox.generate --output-path=lib/demo3/pbi.ex /Users/boya/workplace/willam/demo3/defs/pbi.proto --namespace Demo3.Pbi` to generate the pb file.
+
+
 
 ### Key Functions
 
